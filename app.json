@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/myInfo/myInfo",
+    "pages/mainTest/mainTest"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#548CD7",
+    "navigationBarTitleText": "心理测试服务",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "selectedColor":"#548CD7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/sy.png",
+        "selectedIconPath": "img/sy1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mainTest/mainTest",
+        "iconPath": "img/xlcs.png",
+        "selectedIconPath": "img/xlcs1.png",
+        "text": "心理测试"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "iconPath": "img/grzx.png",
+        "selectedIconPath": "img/grzx1.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

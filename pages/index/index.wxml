@@ -1,0 +1,8 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="200">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item class="itemaa">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
