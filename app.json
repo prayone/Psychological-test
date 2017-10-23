@@ -10,7 +10,7 @@
     "navigationBarBackgroundColor": "#548CD7",
     "navigationBarTitleText": "心理测试服务",
     "navigationBarTextStyle":"#fff",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh":false
   },
   "tabBar": {
     "backgroundColor":"#fff",
