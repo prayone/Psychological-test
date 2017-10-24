@@ -1,1 +1,12 @@
-心理测试页面
+<view class="main-test" wx:for="{{testitems}}" wx:for-item="i">
+      <view class='test-title' >
+           {{i.title}}
+      </view>
+      <view class='test-item' wx:for="{{i.keywords}}" wx:for-item="j">
+          <view class='dd'>
+              {{j}}
+          </view>
+            
+      </view>  
+</view>
+

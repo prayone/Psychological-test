@@ -1,24 +1,36 @@
 <!--index.wxml-->
 <view class="cont" >
+ 
+      <view class='userbg' style=''>
+          <view class="userinfo">
+              <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+                获取头像昵称         
+              </button>
+              <block wx:else>
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"                    background-size="cover"></image>
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+              </block>
+          </view>
+      </view>
 
-    <view class='userbg'>
-        <view class="userinfo">
-            <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
-              获取头像昵称         
-            </button>
-            <block wx:else>
-              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"                    background-size="cover"></image>
-              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            </block>
-        </view>
-    </view>
-    <view>
-         <view>
-             <!-- <image src='http://ww1.sinaimg.cn/large/eccb7e56gy1fksl6wzyk6j200m00m0fq.jpg' class=''></image> -->
-         </view>
-    </view>
-   <!-- <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
-  </view>  -->
+      <view class='info-bot'>
+           <view class=' wdcs'>
+                <text class='text-icon'>我的测试</text>
+                <text class='text-all'></text>
+            </view>
+      </view>
+        <view class='info-bot info-mar'>
+           <view class='yjfk'>
+                <text class='text-icon'>意见反馈</text>
+                <text class='text-all'></text>
+            </view>
+      </view>
+        <view class='info-bot'>
+           <view class='gywm'>
+                <text class='text-icon'>关于我们</text>
+                <text class='text-all'></text>
+            </view>
+      </view>
+   
   
 </view>

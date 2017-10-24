@@ -2,7 +2,7 @@
 .userbg{
   width: 100%;
   height: 200px;
-  background: url(http://ww1.sinaimg.cn/large/eccb7e56gy1fkskoe466yj20k0090js5.jpg) no-repeat;
+  background: url("http://ww1.sinaimg.cn/large/eccb7e56gy1fkskoe466yj20k0090js5.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -26,4 +26,56 @@
 
 .usermotto {
   margin-top: 200px;
+}
+.info-bot{
+  margin-top: 10px;
+}
+.wdcs{
+  margin:0 18px;
+  border-bottom:1px solid #ddd; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 0 0 35px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkth6w6kbzj200o00o0ft.jpg) left center no-repeat;
+  background-size: 18px 18px;
+   /* background-position-x: 15px;  */
+}
+.yjfk{
+  margin:0 18px;
+  border-bottom:1px solid #ddd; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 0 0 35px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkti699jcvj200o00o0b8.jpg) left center no-repeat;
+  background-size: 18px 18px;
+   /* background-position-x: 15px;  */
+}
+.gywm{
+  margin:0 18px;
+  border-bottom:1px solid #ddd; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 0 0 35px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkti44c4hzj200o00o08p.jpg) left center no-repeat;
+  background-size: 18px 18px;
+   /* background-position-x: 15px;  */
+}
+.info-mar{
+  margin: 20px 0;
+}
+.text-icon{
+  color:#8f8f8f;
+  font-size:12px;
+}
+.text-all{
+  width:18px;
+  height:30px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkthhu4w2mj200o00o07y.jpg) center center no-repeat;
+   background-size: 18px 18px;
 }

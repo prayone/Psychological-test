@@ -1,8 +1,53 @@
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="200">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item class="itemaa">
-      <image src="{{item}}" class="slide-image" />
-    </swiper-item>
-  </block>
-</swiper>
+<view class="content">  
+    <view class='selection1'> 
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="200">
+          <block wx:for="{{imgUrls}}">
+            <swiper-item class="itemaa">
+              <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+    </view>
+    <view class='selection2'>
+        <view class='header'>
+            <text>精品导读</text>
+            <text class='text-all'>全部导读</text>
+        </view>
+        <view class='cont'>
+             <view class='cont-item' wx:for="{{contItems}}">
+                  <image src='{{item.url}}'></image>
+                  <view class='cont-item-text'>
+                       <text class='txt'>{{item.title}}</text>
+                  </view>
+             </view>
+            
+        </view>
+        
+    </view>
+    <view class='selection3'>
+        <view class='header'>
+            <text>热门导读</text>
+            <text class='text-all'>热门导读</text>
+        </view>
+        <view class='list-item' wx:for="{{listitems}}">
+              <view class='list-item-images'>
+                  <image class='' src="{{item.url}}"></image>
+                  <image class='avatar' src="{{item.url1}}"></image>
+              </view>
+               <view class='list-item-text'>
+                  <view class='list-item-text-title'>
+                      <text style="position:relative;top:6px;">{{item.title}}</text>
+                  </view>
+                   <view class='list-item-text-content'>
+                        <text padding="0" >
+                        {{item.content}}
+                        </text>
+                  </view>
+              </view>
+        </view>
+    </view>
+
+
+</view>  
+

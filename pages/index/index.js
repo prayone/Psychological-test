@@ -10,6 +10,53 @@ Page({
       'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanpwobvj20ms0ctgm9.jpg',
       'http://ww1.sinaimg.cn/large/eccb7e56ly1fkscjfpzd9j20xc0m53zw.jpg'
     ],
+    contItems:[
+      {
+        url:"../../img/jpdu1.jpg",
+        title:"这里是标题"
+      },
+       {
+        url: "../../img/jpdu3.jpg",
+        title: "这里是标题"
+      },
+       {
+         url: "../../img/jpdu4.jpg",
+         title: "这里是标题"
+       },
+        {
+         url: "../../img/jpdu2.jpg",
+         title: "这里是标题"
+       }
+         
+    ],
+    listitems:[
+      {
+        url: "../../img/jpdu1.jpg",
+        url1: "../../img/jpdu2.jpg",
+        title: "这里是标题",
+        content:"这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+      },
+      {
+        url: "../../img/jpdu3.jpg",
+        url1: "../../img/jpdu4.jpg",
+        title: "这里是标题",
+        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+      },
+      {
+        url: "../../img/jpdu4.jpg",
+        url1: "../../img/jpdu3.jpg",
+        title: "这里是标题",
+        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+        
+      },
+      {
+        url: "../../img/jpdu2.jpg",
+        url1: "../../img/jpdu1.jpg",
+        title: "这里是标题",
+        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+      }
+     
+    ],
    
     indicatorDots: true,
     autoplay: true,
