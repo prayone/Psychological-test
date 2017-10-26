@@ -50,5 +50,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  toast2: function () {
+    wx.navigateTo({
+      url: '../yjback/yjback'
+    })
   }
+
+
 })

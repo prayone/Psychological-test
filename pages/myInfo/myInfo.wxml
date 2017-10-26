@@ -19,7 +19,7 @@
                 <text class='text-all'></text>
             </view>
       </view>
-        <view class='info-bot info-mar'>
+        <view class='info-bot info-mar' bindtap="toast2" >
            <view class='yjfk'>
                 <text class='text-icon'>意见反馈</text>
                 <text class='text-all'></text>

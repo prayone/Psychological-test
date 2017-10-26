@@ -28,7 +28,7 @@
     <view class='selection3'>
         <view class='header'>
             <text>热门导读</text>
-            <text class='text-all'>热门导读</text>
+            <text class='text-all'>更多>></text>
         </view>
         <view class='list-item' wx:for="{{listitems}}">
               <view class='list-item-images'>

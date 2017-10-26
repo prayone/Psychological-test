@@ -3,33 +3,47 @@ const app = getApp()
 
 Page({
   data: {
-
-
+    questionId:null,
+    val:null,
     testitems:[
       {
-        "title": "json在线解析（简版） -JSON在线解析",
+        "id":1,
+        "title": "你心目中的大学生活是怎样的？",
         "keywords": [
-          "json在线解析",
-          "JSON”美化"
+          "美好的",
+          "忧郁的",
+          "忙碌的"
+         
         ]
       },
       {
-        "title": "json在线解析（简版） -JSON在线解析",
+        "id": 2,
+        "title": "你心目中的大学生活是怎样的？",
         "keywords": [
-          "json在线解析",
-          "JSON”美化"
+          "美好的",
+          "忧郁的",
+          "忙碌的",
+          "自由的"
         ]
       },
       {
-        "title": "json在线解析（简版） -JSON在线解析",
+        "id": 3,
+        "title": "你心目中的大学生活是怎样的？",
         "keywords": [
-          "json在线解析",
-          "JSON”美化"
+          "美好的",
+          "忧郁的",
+          "忙碌的",
+          "自由的"
         ]
       }
+    ],
+    arr:[
+      "A","B","C","D"
+    ],
+    jsonData:[
+
     ]
-
-
+    
   },
  
   //------------------事件处理函数
@@ -39,39 +53,45 @@ Page({
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    
   },
   getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+   
+  },
+  checkboxChange: function (e) {
+    // console.log('所选的选项是----'+ e.detail.value)
+    this.setData({ val: e.detail.value, questionId: e.target.dataset.id})
+    // console.log("题目的id是----" + e.target.dataset.id)
+    console.log("题号：" + this.data.questionId+"---选项："+this.data.val)
+
+
+
+    // for(let i=1;i<jsonData.length;i++){
+    //   if (i!=jsonData.id) {
+    //     this.data.jsonData.push({
+    //       id: this.data.questionId,
+    //       option: this.data.val
+    //     })
+    //   } else {
+
+    //   }
+    // }
+   
+  },
+  clickbtn:function(){
+   
+    console.log(this.data.jsonData)
+
+  },
+  //下拉刷新
+  onPullDownRefresh: function () {
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+
+    //模拟加载
+    setTimeout(function () {
+      // complete
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1000);
   }
 })

@@ -1,7 +1,26 @@
-.test-item{
-  border:1px solid red;
-  margin-top:5px;
+page{
+  background-color: #e3f1f4;
 }
-.dd{
+.big{
+  /* font-size: 14px; */
+  /* margin-top: 10px; */
+}
+.test-title{
+  margin: 5px 15px;
+}
+
+.options{
   display: block;
+  margin-left: 20%;
+}
+.btn{
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin:18px auto;
+ 
+}
+checkbox .wx-checkbox-input {
+    border-radius:50%;
+
 }

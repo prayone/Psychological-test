@@ -1,12 +1,15 @@
-<view class="main-test" wx:for="{{testitems}}" wx:for-item="i">
-      <view class='test-title' >
-           {{i.title}}
-      </view>
-      <view class='test-item' wx:for="{{i.keywords}}" wx:for-item="j">
-          <view class='dd'>
-              {{j}}
-          </view>
-            
-      </view>  
+<view class="big" wx:for="{{testitems}}" wx:for-item="i">
+      <checkbox-group bindchange="checkboxChange" data-id="{{i.id}}" >
+          <view class='test-title' >
+                {{index+1}}. {{i.title}}
+            </view>
+            <label class="checkbox options"    wx:for="{{i.keywords}}" wx:for-item="j">
+                <checkbox value="{{arr[index]}}"  class=""/>  {{arr[index]}}.  {{j}}
+            </label>
+      </checkbox-group>
+     
 </view>
+ <view class="btn">
+           <button type="primary" bindtap="clickbtn"  class="" style=""> 下一页 </button>
+ </view>
 

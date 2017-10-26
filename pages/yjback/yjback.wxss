@@ -1,0 +1,29 @@
+
+.big{
+  width: 80%;
+  margin:30px auto;
+  font-size: 12px;
+  color: #444;
+}
+.sec{
+  border: 1px solid #ddd;
+}
+.txt{
+  margin: 9px 0;
+}
+.shuru{
+  padding:6px;
+}
+.btn{
+  margin-top: 50px;
+  background-color: #548CD7;
+  color: #fff;
+}
+placeholder-style {
+        /* placeholder颜色  */
+       color: red;
+         /* placeholder字体大小  */
+         font-size: 12px;
+         /* placeholder位置  */
+         text-align: right;
+     }

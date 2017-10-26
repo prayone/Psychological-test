@@ -3,14 +3,16 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/myInfo/myInfo",
-    "pages/mainTest/mainTest"
+    "pages/mainTest/mainTest",
+    "pages/yjback/yjback"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#548CD7",
     "navigationBarTitleText": "心理测试服务",
-    "navigationBarTextStyle":"#fff",
-    "enablePullDownRefresh":false
+    "navigationBarTextStyle":"#fff"
+    
   },
   "tabBar": {
     "backgroundColor":"#fff",

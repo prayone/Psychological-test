@@ -1,0 +1,25 @@
+<view class="big">
+    <view class='section'>
+        <view class='wtms'>
+            <view class='txt'>
+                问题描述
+            </view>
+           <view class="sec">
+                <textarea placeholder-style="color:#aaa;" placeholder="您的意见就是我们前进的动力" auto-focus class='shuru' />
+            </view>
+        </view>
+    </view>
+    <view class='section'>
+        <view class='lxfs'>
+            <view class='txt'>
+                联系方式
+            </view>
+            <view class="sec">
+                <input class='shuru' placeholder-style="color:#aaa;" password type="text" placeholder='请留下您的联系方式（QQ、微信、手机号）等' />
+            </view>
+        </view>
+    </view>
+    <view class='section'>
+          <button  size="{{primarySize}}" class='btn' bindtap="tijiao"> 提交 </button>
+    </view>
+</view>
