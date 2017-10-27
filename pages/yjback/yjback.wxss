@@ -1,6 +1,6 @@
 
 .big{
-  width: 80%;
+  width: 85%;
   margin:30px auto;
   font-size: 12px;
   color: #444;
@@ -19,11 +19,3 @@
   background-color: #548CD7;
   color: #fff;
 }
-placeholder-style {
-        /* placeholder颜色  */
-       color: red;
-         /* placeholder字体大小  */
-         font-size: 12px;
-         /* placeholder位置  */
-         text-align: right;
-     }

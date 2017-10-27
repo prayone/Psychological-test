@@ -4,7 +4,11 @@
     "pages/logs/logs",
     "pages/myInfo/myInfo",
     "pages/mainTest/mainTest",
-    "pages/yjback/yjback"
+    "pages/yjback/yjback",
+    "pages/mainTesta/mainTesta",
+    "pages/mainTestb/mainTestb",
+    "pages/testRes/testRes"
+    
     
   ],
   "window":{

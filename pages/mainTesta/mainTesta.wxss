@@ -1,6 +1,7 @@
 page{
   background-color: #e3f1f4;
-  padding-top: 10px;
+    padding-top: 10px;
+
 }
 .big{
   /* font-size: 14px; */

@@ -1,0 +1,38 @@
+page{
+  background-color: #f6f6f6;
+  padding-top:18px;
+}
+.sec2{
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkwmsuw0g9j20k000g0si.jpg) top center no-repeat;
+  padding:0 20px;
+  font-size: 15px;
+  background-color: #f6f6f6;
+}
+.txt{
+  border-bottom:1px solid #ddd;
+  color: #548CD7;
+  padding:30px;
+  padding-left: 35px;
+  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkwmx6cpvdj200w00w0sh.jpg) center left no-repeat;
+}
+.jibie{
+  padding:10px 3px;
+  font-size: 24px;
+  font-weight:700;
+  color:#000;
+}
+.jieguo{
+  font-size:14px;
+  color:#444;
+}
+.btn{
+  margin:10px 0;
+}
+.lan{
+  background-color: #548CD7;
+  color: #fff;
+
+}
+.fenxiang{
+  margin-top:40px;
+}

@@ -3,21 +3,21 @@ const app = getApp()
 
 Page({
   data: {
-    questionId:null,
-    val:null,
-    testitems:[
+    questionId: null,
+    val: null,
+    testitems: [
       {
-        "id":1,
+        "id": 4,
         "title": "你心目中的大学生活是怎样的？",
         "keywords": [
           "美好的",
           "忧郁的",
           "忙碌的"
-         
+
         ]
       },
       {
-        "id": 2,
+        "id": 5,
         "title": "你心目中的大学生活是怎样的？",
         "keywords": [
           "美好的",
@@ -27,7 +27,7 @@ Page({
         ]
       },
       {
-        "id": 3,
+        "id": 6,
         "title": "你心目中的大学生活是怎样的？",
         "keywords": [
           "美好的",
@@ -37,15 +37,15 @@ Page({
         ]
       }
     ],
-    arr:[
-      "A","B","C","D"
+    arr: [
+      "A", "B", "C", "D"
     ],
-    jsonData:[
+    jsonData: [
 
     ]
-    
+
   },
- 
+
   //------------------事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -53,16 +53,16 @@ Page({
     })
   },
   onLoad: function () {
-    
+
   },
   getUserInfo: function (e) {
-   
+
   },
   checkboxChange: function (e) {
     // console.log('所选的选项是----'+ e.detail.value)
-    this.setData({ val: e.detail.value, questionId: e.target.dataset.id})
+    this.setData({ val: e.detail.value, questionId: e.target.dataset.id })
     // console.log("题目的id是----" + e.target.dataset.id)
-    console.log("题号：" + this.data.questionId+"---选项："+this.data.val)
+    console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
 
 
 
@@ -76,13 +76,13 @@ Page({
 
     //   }
     // }
-   
+
   },
-  clickbtn:function(){
-   
-    console.log(this.data.jsonData);
-    wx.navigateTo({
-      url: "../mainTesta/mainTesta"
+  clickbtn: function () {
+
+    console.log(this.data.jsonData)
+    wx.redirectTo({
+      url: "../mainTestb/mainTestb"
     })
 
   },
