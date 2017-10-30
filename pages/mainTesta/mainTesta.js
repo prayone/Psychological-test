@@ -40,9 +40,9 @@ Page({
     arr: [
       "A", "B", "C", "D"
     ],
-    jsonData: [
+    jsonData: {
 
-    ]
+    }
 
   },
 
@@ -52,30 +52,16 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-
+  onLoad: function (options) {
+      console.log(options.jsonPage)
   },
   getUserInfo: function (e) {
 
   },
   checkboxChange: function (e) {
-    // console.log('所选的选项是----'+ e.detail.value)
     this.setData({ val: e.detail.value, questionId: e.target.dataset.id })
-    // console.log("题目的id是----" + e.target.dataset.id)
     console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
-
-
-
-    // for(let i=1;i<jsonData.length;i++){
-    //   if (i!=jsonData.id) {
-    //     this.data.jsonData.push({
-    //       id: this.data.questionId,
-    //       option: this.data.val
-    //     })
-    //   } else {
-
-    //   }
-    // }
+    this.data.jsonData[this.data.questionId] = this.data.val;
 
   },
   clickbtn: function () {
