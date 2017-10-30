@@ -65,12 +65,10 @@ Page({
 
   },
   clickbtn: function () {
-
     console.log(this.data.jsonData)
     wx.redirectTo({
       url: "../mainTestb/mainTestb"
     })
-
   },
   //下拉刷新
   onPullDownRefresh: function () {

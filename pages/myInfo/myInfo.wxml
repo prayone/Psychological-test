@@ -25,7 +25,7 @@
                 <text class='text-all'></text>
             </view>
       </view>
-        <view class='info-bot'>
+        <view class='info-bot' bindtap="aboutUs">
            <view class='gywm'>
                 <text class='text-icon'>关于我们</text>
                 <text class='text-all'></text>

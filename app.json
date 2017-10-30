@@ -7,9 +7,8 @@
     "pages/yjback/yjback",
     "pages/mainTesta/mainTesta",
     "pages/mainTestb/mainTestb",
-    "pages/testRes/testRes"
-    
-    
+    "pages/testRes/testRes",
+    "pages/aboutUs/aboutUs"
   ],
   "window":{
     "backgroundTextStyle":"light",

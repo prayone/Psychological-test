@@ -1,0 +1,11 @@
+<view class="container">
+    <view class='img'>
+        <image src='http://ww1.sinaimg.cn/large/eccb7e56ly1fl0fgupl45j20hs0hs3yn.jpg'></image>
+    </view>
+    <view class='center'>
+       微主： prayone
+    </view>
+    <view class='center'>
+       QQ： 1054864949
+    </view>
+</view>

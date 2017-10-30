@@ -55,7 +55,13 @@ Page({
     wx.navigateTo({
       url: '../yjback/yjback'
     })
+  },
+  aboutUs:function(){
+    wx.navigateTo({
+      url: '../aboutUs/aboutUs'
+    })
   }
+
 
 
 })
