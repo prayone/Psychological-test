@@ -91,11 +91,14 @@ Page({
     app.globalData.answerList[this.data.questionId] = this.data.val;
 
   },
+  
   clickbtn: function () {
+    console.log(app.globalData.answerList)
     var answer_len = Object.keys(app.globalData.answerList).length;
+    console.log("dddddddddddddddddd"+answer_len)
     if (answer_len<5){
       wx.showModal({
-          // title: '提示',
+          title: '提示',
           content: '请您将所有题目填完再提交！',
           success: function(res) {
             if (res.confirm) {
@@ -110,7 +113,10 @@ Page({
        url: "../testRes/testRes"
     })
     }
-    console.log(answer_len)
+   
+    
+  },
+  onHide: function () {
     
   },
   //下拉刷新

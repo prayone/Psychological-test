@@ -12,6 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.globalData.answerList = {};
+    console.log("hhhhhhhhhhhhhhhhhhhhhhhh"+app.globalData.answerList)
     var score=0;
     for (var key in app.globalData.answerList){
       var answer_val = parseInt(app.globalData.answerList[key])
