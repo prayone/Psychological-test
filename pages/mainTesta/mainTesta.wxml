@@ -1,7 +1,7 @@
 <view class="big" wx:key wx:for="{{testitems}}" wx:for-item="i">
       <radio-group bindchange="checkboxChange" data-id="{{i.id}}" >
           <view class='test-title' >
-                {{index+4}}. {{i.title}}
+                {{index}}. {{i.title}}
             </view>
             <label class="radio options" wx:key   wx:for="{{i.keywords}}" wx:for-item="j">
                 <radio value="{{score[index]}}"  class=""/>  {{arr[index]}}.  {{j}}
