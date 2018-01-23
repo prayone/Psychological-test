@@ -7,13 +7,48 @@ Page({
     val: null,
     testitems: [
       {
+        "id": 1,
+        "title": "你心目中的大学生活是怎样的？",
+        "keywords": [
+          "美好的",
+          "忧郁的",
+          "忙碌的",
+          "忙碌的",
+          "忙碌的"
+
+        ]
+      },
+      {
+        "id": 2,
+        "title": "你心目中的大学生活是怎样的？",
+        "keywords": [
+          "美好的",
+          "忧郁的",
+          "忙碌的",
+          "自由的",
+          "忙碌的"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "你心目中的大学生活是怎样的？",
+        "keywords": [
+          "美好的",
+          "忧郁的",
+          "忙碌的",
+          "自由的",
+          "忙碌的"
+        ]
+      },
+      {
         "id": 4,
         "title": "你心目中的大学生活是怎样的？",
         "keywords": [
           "美好的",
           "忧郁的",
+          "忙碌的",
+          "自由的",
           "忙碌的"
-
         ]
       },
       {
@@ -23,26 +58,18 @@ Page({
           "美好的",
           "忧郁的",
           "忙碌的",
-          "自由的"
-        ]
-      },
-      {
-        "id": 6,
-        "title": "你心目中的大学生活是怎样的？",
-        "keywords": [
-          "美好的",
-          "忧郁的",
-          "忙碌的",
-          "自由的"
+          "自由的",
+          "忙碌的"
         ]
       }
     ],
     arr: [
-      "A", "B", "C", "D"
+      "A", "B", "C", "D","E"
     ],
-    jsonData: {
-
-    }
+    score:[
+        0,1,2,3,4
+    ],
+    jsonData: null
 
   },
 
@@ -53,7 +80,7 @@ Page({
     })
   },
   onLoad: function (options) {
-      console.log(options.jsonPage)
+     
   },
   getUserInfo: function (e) {
 
@@ -61,14 +88,30 @@ Page({
   checkboxChange: function (e) {
     this.setData({ val: e.detail.value, questionId: e.target.dataset.id })
     console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
-    this.data.jsonData[this.data.questionId] = this.data.val;
+    app.globalData.answerList[this.data.questionId] = this.data.val;
 
   },
   clickbtn: function () {
-    console.log(this.data.jsonData)
-    wx.redirectTo({
-      url: "../mainTestb/mainTestb"
+    var answer_len = Object.keys(app.globalData.answerList).length;
+    if (answer_len<5){
+      wx.showModal({
+          // title: '提示',
+          content: '请您将所有题目填完再提交！',
+          success: function(res) {
+            if (res.confirm) {
+              // console.log('用户点击确定')
+            } else if (res.cancel) {
+              // console.log('用户点击取消')
+            }
+          }
+        })
+    }else{
+      wx.redirectTo({
+       url: "../testRes/testRes"
     })
+    }
+    console.log(answer_len)
+    
   },
   //下拉刷新
   onPullDownRefresh: function () {

@@ -21,6 +21,10 @@ page{
   margin:18px auto;
  
 }
+.button{
+  background-color:#548CD7;
+  color: #fff;
+}
 checkbox .wx-checkbox-input {
     border-radius:50%;
 

@@ -6,10 +6,13 @@
         <view class='jibie'>
               A
         </view>
-        <view class='jieguo'>
+        <!-- <view class='jieguo'>
              不用担心，你的人际关系情况很好，严格来说，你简直就是人际关系的高手，你在你的社交圈子里如鱼得水，你只需要保持你目前的与人交往能力就行了。只不过，你很讨厌去面对一些不喜欢的人，觉得自己不管再怎么喜欢聚会中的热闹，你也会需要有一定的空间。就像一个人静静地呆在家里，做一喜欢做的事情，看一些喜欢看的书或电影。宅在你的眼中并不是一种生活方式，而是缓解工作职场或者学习中的一些压力而已。所以完全不用担心，你在社交科目中能拿到的分数，绝对是在优秀级别。
 
-        </view>
+        </view> -->
+         <view class='jieguo'>
+            {{result}}
+        </view> 
         <view class="btn fenxiang">
               <button  bindtap="clickbtn"  class="lan " style="">分享给好友 </button>
         </view>

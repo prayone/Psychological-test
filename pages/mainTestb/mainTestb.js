@@ -52,8 +52,15 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-
+  onLoad: function (option) {
+       this.setData({    
+          jsonData: option.jsonData    
+      });
+       console.log(typeof JSON.parse(this.data.jsonData))  
+       console.log(JSON.parse(this.data.jsonData))  
+       for(var key in this.data.jsonData){
+          console.log(this.data.jsonData[key])
+       }
   },
   getUserInfo: function (e) {
 

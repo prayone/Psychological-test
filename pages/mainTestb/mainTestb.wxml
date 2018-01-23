@@ -1,9 +1,9 @@
-<view class="big" wx:for="{{testitems}}" wx:for-item="i">
+<view class="big" wx:key wx:for="{{testitems}}" wx:for-item="i">
       <checkbox-group bindchange="checkboxChange" data-id="{{i.id}}" >
           <view class='test-title' >
                 {{index+7}}. {{i.title}}
             </view>
-            <label class="checkbox options"    wx:for="{{i.keywords}}" wx:for-item="j">
+            <label class="checkbox options" wx:key   wx:for="{{i.keywords}}" wx:for-item="j">
                 <checkbox value="{{arr[index]}}"  class=""/>  {{arr[index]}}.  {{j}}
             </label>
       </checkbox-group>

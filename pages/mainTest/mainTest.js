@@ -67,8 +67,7 @@ Page({
   },
   clickbtn:function(){
     this.data.jsonPage++;
-    console.log(this.data.jsonData);
-    console.log(this.data.jsonPage);
+   
     
     wx.navigateTo({
       url: "../mainTesta/mainTesta?jsonPage=" + this.data.jsonPage
