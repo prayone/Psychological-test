@@ -1,4 +1,5 @@
-//获取应用实例
+//获取题目实例
+var api = require('../../utils/ajax.js')
 const app = getApp()
 
 Page({
@@ -6,45 +7,14 @@ Page({
     jsonPage:1,
     questionId:null,
     val:null,
-    testitems:[
-      {
-        "id":1,
-        "title": "你心目中的大学生活是怎样的？",
-        "keywords": [
-          "美好的",
-          "忧郁的",
-          "忙碌的"
-         
-        ]
-      },
-      {
-        "id": 2,
-        "title": "你心目中的大学生活是怎样的？",
-        "keywords": [
-          "美好的",
-          "忧郁的",
-          "忙碌的",
-          "自由的"
-        ]
-      },
-      {
-        "id": 3,
-        "title": "你心目中的大学生活是怎样的？",
-        "keywords": [
-          "美好的",
-          "忧郁的",
-          "忙碌的",
-          "自由的"
-        ]
-      }
-    ],
+    testitems:{
+
+    },
     arr:[
       "A","B","C","D"
     ],
     jsonData:{
-
     }
-    
   },
  
   //------------------事件处理函数
@@ -54,11 +24,16 @@ Page({
     })
   },
   onLoad: function () {
-    
+    var that=this;
+    api.getData('/rs/question?order=asc',"GET").then((res)=>{
+      console.log(res)
+            wx.hideLoading()
+            that.setData({
+              testitems:res.rows
+            })
+      })
   },
-  getUserInfo: function (e) {
-   
-  },
+  
   checkboxChange: function (e) {
     this.setData({ val: e.detail.value, questionId: e.target.dataset.id})
     console.log("题号：" + this.data.questionId+"---选项："+this.data.val)
@@ -67,8 +42,6 @@ Page({
   },
   clickbtn:function(){
     this.data.jsonPage++;
-   
-    
     wx.navigateTo({
       url: "../mainTesta/mainTesta?jsonPage=" + this.data.jsonPage
     })
@@ -77,7 +50,6 @@ Page({
   //下拉刷新
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
-
     //模拟加载
     setTimeout(function () {
       // complete
