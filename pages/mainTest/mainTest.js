@@ -26,26 +26,43 @@ Page({
   onLoad: function () {
     var that=this;
     api.getData('/rs/question?order=asc',"GET").then((res)=>{
-      console.log(res)
             wx.hideLoading()
             that.setData({
-              testitems:res.rows
+              testitems:res.data.rows
             })
+            console.log(that.data.testitems)
       })
   },
   
   checkboxChange: function (e) {
-    this.setData({ val: e.detail.value, questionId: e.target.dataset.id})
-    console.log("题号：" + this.data.questionId+"---选项："+this.data.val)
-    this.data.jsonData[this.data.questionId]=this.data.val;
+    this.setData({ val: e.detail.value, questionId: e.target.dataset.id })
+    console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
+    app.globalData.answerList[this.data.questionId] = this.data.val;
 
   },
-  clickbtn:function(){
-    this.data.jsonPage++;
-    wx.navigateTo({
-      url: "../mainTesta/mainTesta?jsonPage=" + this.data.jsonPage
+  clickbtn: function () {
+    // console.log(app.globalData.answerList)
+    var answer_len = Object.keys(app.globalData.answerList).length;
+    console.log("answer_len"+answer_len)
+    if (answer_len>93){
+      wx.showModal({
+          title: '提示',
+          content: '请您将所有题目填完再提交！',
+          success: function(res) {
+            if (res.confirm) {
+              // console.log('用户点击确定')
+            } else if (res.cancel) {
+              // console.log('用户点击取消')
+            }
+          }
+        })
+    }else{
+      wx.redirectTo({
+       url: "../testRes/testRes"
     })
-
+    }
+   
+    
   },
   //下拉刷新
   onPullDownRefresh: function () {

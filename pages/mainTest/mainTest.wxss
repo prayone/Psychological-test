@@ -1,18 +1,20 @@
 page{
   background-color: #e3f1f4;
   padding-top: 10px;
+  
 }
-.big{
-  /* font-size: 14px; */
-  /* margin-top: 10px; */
-}
+ .big{
+   /* font-size: 12px; 
+   margin-top: 10px;  */
+} 
 .test-title{
+  font-weight:bold;
   margin: 5px 15px;
 }
 
 .options{
   display: block;
-  margin-left: 20%;
+  margin-left: 30px;
 }
 .btn{
   display: block;
