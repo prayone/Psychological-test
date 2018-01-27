@@ -1,19 +1,33 @@
 <view class="content">
-    <view class='sec2'>
-        <view class='txt'>
-            我的测试结果
-        </view>
-        <view class='jibie'>
-              A
-        </view>
-         <view class='jieguo'>
-            {{result}}
-        </view> 
-        <view class="btn fenxiang">
-              <button  bindtap="clickbtn"  class="lan " style="">分享给好友 </button>
-        </view>
-        <view class="btn">
-              <button  bindtap="clickbtn"  class="lan" style="">更多测试 </button>
-        </view>
-    </view>
+    <block wx:if="{{res==1}}">
+         <view class='txt'>
+                我的测试结果
+            </view>
+            <view class='jibie'>
+                  关键词：{{level}}
+            </view>
+             <view class='jieguo'>
+                {{result}}
+            </view> 
+    </block>
+    <block wx:else>
+         <view class='sec2'>
+            <view class='txt'>
+                我的测试结果
+            </view>
+            <view class='jibie'>
+                  关键词：{{level}}
+            </view>
+             <view class='jieguo'>
+                {{result}}
+            </view> 
+            <view class="btn fenxiang">
+                  <button open-type="share" bindtap="clickbtn"  class="lan" style="">分享给好友 </button>
+            </view>
+            <view class="btn">
+                  <button  bindtap="back_test"  class="lan" style="">重新测试 </button>
+            </view>
+          </view>
+    </block>
+   
 </view>

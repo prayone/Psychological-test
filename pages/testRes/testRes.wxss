@@ -17,9 +17,9 @@ page{
 }
 .jibie{
   padding:10px 3px;
-  font-size: 24px;
-  font-weight:700;
-  color:#000;
+  font-size: 18px;
+  color:#f00;
+  font-weight:bold;
 }
 .jieguo{
   font-size:14px;
