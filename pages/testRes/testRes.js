@@ -132,7 +132,8 @@ Page({
   onShareAppMessage: function () {
       return {
         title: '了解自己，从测试开始',
-        path: `/pages/testRes/testRes?res=1`,
+        desc:this.data.result,
+        path: `/pages/testRes/testRes?res=1`
     }
   }
 })
