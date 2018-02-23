@@ -49,7 +49,7 @@ Page({
         console.log("题号：" + that.data.questionId + "---选项：" + that.data.val)
         app.globalData.answerList[that.data.questionId] = that.data.val;
       }
-    },300)
+    },200)
   },
   clickbtn: function () {
     // console.log(app.globalData.answerList)
