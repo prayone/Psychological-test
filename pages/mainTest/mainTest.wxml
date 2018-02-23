@@ -2,10 +2,10 @@
       <view class='test-title' >
             {{current_question+1}}. {{testitems[current_question].title}}
       </view>
-      <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" checked="{{aa}}">
+      <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
           <view wx:key   wx:for="{{testitems[current_question].answers_json}}" wx:for-index="idx" wx:for-item="j">
               <label class="radio options" wx:key  wx:for="{{j}}" wx:for-index="option" wx:for-item="option_val">
-              	<radio value="{{option}}"/>  {{arr[idx]}}.  {{option_val}}
+              	<radio value="{{option}}" checked="{{aa}}"/>  {{arr[idx]}}.  {{option_val}}
           	  </label>
           </view>
       </radio-group>
