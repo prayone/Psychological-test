@@ -29,5 +29,6 @@ page{
 }
 checkbox .wx-checkbox-input {
     border-radius:50%;
+    background-color:blue!important;
 
 }

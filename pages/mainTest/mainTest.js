@@ -28,7 +28,7 @@ Page({
   },
   onLoad: function () {
     var that=this;
-    api.getData('/rs/question?order=asc',"GET").then((res)=>{
+    api.getData('/rs/question?order=asc&status=1',"GET").then((res)=>{
             wx.hideLoading()
             that.setData({
               testitems:res.data.rows
@@ -38,10 +38,18 @@ Page({
   },
   
   checkboxChange: function (e) {
-    this.setData({current_question:++this.data.current_question, val: e.detail.value, questionId: e.target.dataset.id })
-    console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
-    console.log(this.data.current_question)
-    app.globalData.answerList[this.data.questionId] = this.data.val;
+    var that=this;
+    setTimeout(function(){
+      if (e.target.dataset.id == that.data.testitems[that.data.testitems.length-1].id){
+        wx.redirectTo({
+          url: "../testRes/testRes"
+        })
+      }else{
+        that.setData({ current_question: ++that.data.current_question, val: e.detail.value, questionId: e.target.dataset.id, aa: false })
+        console.log("题号：" + that.data.questionId + "---选项：" + that.data.val)
+        app.globalData.answerList[that.data.questionId] = that.data.val;
+      }
+    },300)
   },
   clickbtn: function () {
     // console.log(app.globalData.answerList)
