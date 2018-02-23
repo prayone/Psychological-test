@@ -1,18 +1,16 @@
-<view class="big" wx:key wx:for="{{testitems}}" wx:for-item="i">
-     
-      <radio-group bindchange="checkboxChange" data-id="{{i.id}}" >
-            <view class='test-title' >
-                {{index+1}}. {{i.title}}
-            </view>
-            <view class='' wx:key   wx:for="{{i.answers_json}}" wx:for-index="idx" wx:for-item="j">
-                <label class="radio options" wx:key   wx:for="{{j}}" wx:for-index="option" wx:for-item="option_val">
-                	<radio value="{{option}}"  class=""/>  {{arr[idx]}}.  {{option_val}}
-            	</label>
-            </view>
-            
+<view class="big" >
+      <view class='test-title' >
+            {{current_question+1}}. {{testitems[current_question].title}}
+      </view>
+      <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" checked="{{aa}}">
+          <view wx:key   wx:for="{{testitems[current_question].answers_json}}" wx:for-index="idx" wx:for-item="j">
+              <label class="radio options" wx:key  wx:for="{{j}}" wx:for-index="option" wx:for-item="option_val">
+              	<radio value="{{option}}"/>  {{arr[idx]}}.  {{option_val}}
+          	  </label>
+          </view>
       </radio-group>
 </view>
- <view class="btn">
-       <button  bindtap="clickbtn"  class="button" style=""> 提交</button>
- </view>
+<!-- <view class="btn">
+    <button  bindtap="clickbtn"  class="button" style=""> 提交</button>
+</view> -->
 

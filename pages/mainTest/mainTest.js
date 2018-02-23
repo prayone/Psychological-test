@@ -10,11 +10,14 @@ Page({
     testitems:{
 
     },
+    current_question:0,
     arr:[
       "A","B","C","D"
     ],
     jsonData:{
-    }
+    },
+    aa:false
+
   },
  
   //------------------事件处理函数
@@ -35,10 +38,10 @@ Page({
   },
   
   checkboxChange: function (e) {
-    this.setData({ val: e.detail.value, questionId: e.target.dataset.id })
+    this.setData({current_question:++this.data.current_question, val: e.detail.value, questionId: e.target.dataset.id })
     console.log("题号：" + this.data.questionId + "---选项：" + this.data.val)
+    console.log(this.data.current_question)
     app.globalData.answerList[this.data.questionId] = this.data.val;
-
   },
   clickbtn: function () {
     // console.log(app.globalData.answerList)
