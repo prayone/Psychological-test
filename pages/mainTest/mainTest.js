@@ -16,7 +16,8 @@ Page({
     ],
     jsonData:{
     },
-    aa:false
+    aa:false,
+    progress:100/46
 
   },
  
@@ -45,36 +46,13 @@ Page({
           url: "../testRes/testRes"
         })
       }else{
-        that.setData({ current_question: ++that.data.current_question, val: e.detail.value, questionId: e.target.dataset.id, aa: false })
+        that.setData({ current_question: ++that.data.current_question, val: e.detail.value, questionId: e.target.dataset.id, aa: false, progress: that.data.progress + 100/46 })
         console.log("题号：" + that.data.questionId + "---选项：" + that.data.val)
         app.globalData.answerList[that.data.questionId] = that.data.val;
       }
     },200)
   },
-  clickbtn: function () {
-    // console.log(app.globalData.answerList)
-    var answer_len = Object.keys(app.globalData.answerList).length;
-    console.log("answer_len"+answer_len)
-    if (answer_len>93){
-      wx.showModal({
-          title: '提示',
-          content: '请您将所有题目填完再提交！',
-          success: function(res) {
-            if (res.confirm) {
-              // console.log('用户点击确定')
-            } else if (res.cancel) {
-              // console.log('用户点击取消')
-            }
-          }
-        })
-    }else{
-      wx.redirectTo({
-       url: "../testRes/testRes"
-    })
-    }
-   
-    
-  },
+  
   //下拉刷新
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载

@@ -1,6 +1,14 @@
+<view class='sec_title'>
+<image src='../../img/xinli.png' style='display:inline-block;width:50px;height:50px;position:relative;top:20px;'></image>
+    哪一个答案最能贴切地描绘你一般的感受或行为？
+</view>
+<progress percent="{{progress}}" color="#548CD7"  active-mode="forwards" backgroundColor="#ddd"  />
+<view class='current_ques'>
+     {{current_question+1}}/{{testitems.length}}
+</view>
 <view class="big" >
       <view class='test-title' >
-            {{current_question+1}}. {{testitems[current_question].title}}
+             {{testitems[current_question].title}}
       </view>
       <radio-group bindchange="checkboxChange" data-id="{{testitems[current_question].id}}" >
           <view wx:key   wx:for="{{testitems[current_question].answers_json}}" wx:for-index="idx" wx:for-item="j">
@@ -10,7 +18,4 @@
           </view>
       </radio-group>
 </view>
-<!-- <view class="btn">
-    <button  bindtap="clickbtn"  class="button" style=""> 提交</button>
-</view> -->
 

@@ -15,6 +15,7 @@ page{
 .options{
   display: block;
   margin-left: 30px;
+  margin-right:8px;
 }
 .btn{
   display: block;
@@ -29,6 +30,13 @@ page{
 }
 checkbox .wx-checkbox-input {
     border-radius:50%;
-    background-color:blue!important;
-
+}
+.current_ques{
+    margin:8px 0 28px 10px;
+    color:#999;
+    font-size:13px;
+}
+.sec_title{
+  margin: 10px 10px 10px 17px;
+  color:#548CD7;
 }
