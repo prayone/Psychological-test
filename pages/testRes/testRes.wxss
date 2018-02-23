@@ -24,6 +24,7 @@ page{
 .jieguo{
   font-size:14px;
   color:#444;
+  text-indent: 28px;
 }
 .btn{
   margin:10px 0;

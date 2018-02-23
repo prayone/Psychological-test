@@ -1,3 +1,4 @@
+var api = require('../../utils/ajax.js')
 const app = getApp();
 Page({
 
@@ -14,6 +15,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.res)
+
+
     var val_arr=[];
     for (var key in app.globalData.answerList){
       var answer_val = app.globalData.answerList[key];
@@ -77,16 +81,10 @@ Page({
   clickbtn: function () {
    
   },
-  back_test: function () {
-   wx.switchTab({
-        url: 'pages/mainTest/mainTest'
-  })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
   },
 
   /**
@@ -132,7 +130,6 @@ Page({
   onShareAppMessage: function () {
       return {
         title: '了解自己，从测试开始',
-        desc:this.data.result,
         path: `/pages/testRes/testRes?res=1`
     }
   }

@@ -36,7 +36,7 @@ App({
   globalData: {
     userInfo: null,
     answerList:{},
-    Host:'http://psy.moxiaonai.cn'
+    Host:'https://psy.moxiaonai.cn'
   }
 
 

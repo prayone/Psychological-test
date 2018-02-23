@@ -19,13 +19,16 @@
                   关键词：{{level}}
             </view>
              <view class='jieguo'>
-                {{result}}
+               {{result}}
             </view> 
             <view class="btn fenxiang">
                   <button open-type="share" bindtap="clickbtn"  class="lan" style="">分享给好友 </button>
             </view>
             <view class="btn">
-                  <button  bindtap="back_test"  class="lan" style="">重新测试 </button>
+              <navigator open-type="switchTab" url="../mainTest/mainTest" >
+                  <button   class="lan" style="">重新测试 </button>
+              </navigator>
+                  
             </view>
           </view>
     </block>
