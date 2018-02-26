@@ -1,61 +1,86 @@
-//index.js
+var api = require('../../utils/ajax.js')
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
+    articleItems:[],
+    article_title:"",
     imgUrls: [
-      'http://ww1.sinaimg.cn/large/eccb7e56ly1fksaf0sewpj20go0afwij.jpg',
-      'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanbr218j20dw099q3k.jpg',
-      'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanpwobvj20ms0ctgm9.jpg',
-      'http://ww1.sinaimg.cn/large/eccb7e56ly1fkscjfpzd9j20xc0m53zw.jpg'
-    ],
+                {
+                  id: "",
+                  url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksaf0sewpj20go0afwij.jpg',
+                  title: ""
+                },
+                {
+                  id: "",
+                  url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanbr218j20dw099q3k.jpg',
+                  title: ""
+                },
+                {
+                  id: "",
+                  url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanpwobvj20ms0ctgm9.jpg',
+                  title: ""
+                },
+                {
+                  id: "",
+                  url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fkscjfpzd9j20xc0m53zw.jpg',
+                  title: ""
+                }
+        ],
     contItems:[
       {
-        url:"../../img/jpdu1.jpg",
-        title:"这里是标题"
+        id: "",
+        url: "../../img/jpdu1.jpg",
+        title: ""
       },
-       {
+      {
+        id: "",
         url: "../../img/jpdu3.jpg",
-        title: "这里是标题"
+        title: ""
       },
-       {
-         url: "../../img/jpdu4.jpg",
-         title: "这里是标题"
-       },
-        {
-         url: "../../img/jpdu2.jpg",
-         title: "这里是标题"
-       }
+      {
+        id: "",
+        url: "../../img/jpdu4.jpg",
+        title: ""
+      },
+      {
+        id: "",
+        url: "../../img/jpdu2.jpg",
+        title: ""
+      }
          
     ],
     listitems:[
       {
-        url: "../../img/jpdu1.jpg",
+        id: "",
+        url: "../../img/rmdd1.jpg",
         url1: "../../img/jpdu2.jpg",
-        title: "这里是标题",
-        content:"这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+        title: "",
+        content: "         "
       },
       {
-        url: "../../img/jpdu3.jpg",
+        id: "",
+        url: "../../img/rmdd3.jpg",
         url1: "../../img/jpdu4.jpg",
-        title: "这里是标题",
-        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+        title: "",
+        content: "         "
       },
       {
-        url: "../../img/jpdu4.jpg",
+        id: "",
+        url: "../../img/rmdd4.jpg",
         url1: "../../img/jpdu3.jpg",
-        title: "这里是标题",
-        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
-        
+        title: "",
+        content: "         "
+
       },
       {
-        url: "../../img/jpdu2.jpg",
+        id: "",
+        url: "../../img/rmdd2.jpg",
         url1: "../../img/jpdu1.jpg",
-        title: "这里是标题",
-        content: "这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容"
+        title: "",
+        content: "         "
       }
-     
     ],
    
     indicatorDots: true,
@@ -83,47 +108,118 @@ Page({
       duration: e.detail.value
     })
   },
-
-  //------------------事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+      var that = this;
+      wx.showLoading({
+        title: '加载中',
+      });
+      var dest = [
+        {
+          id:"",
+          url: "../../img/jpdu1.jpg",
+          title: ""
+        },
+        {
+          id: "",
+          url: "../../img/jpdu3.jpg",
+          title: ""
+        },
+        {
+          id: "",
+          url: "../../img/jpdu4.jpg",
+          title: ""
+        },
+        {
+          id: "",
+          url: "../../img/jpdu2.jpg",
+          title: ""
         }
+      ]
+      var dest_item = [{
+        id: "",
+        url: "../../img/rmdd1.jpg",
+        url1: "../../img/jpdu2.jpg",
+        title: "",
+        content: "         "
+      },
+      {
+        id: "",
+        url: "../../img/rmdd.jpg",
+        url1: "../../img/jpdu4.jpg",
+        title: "",
+        content: "         "
+      },
+      {
+        id: "",
+        url: "../../img/rmdd4.jpg",
+        url1: "../../img/jpdu3.jpg",
+        title: "",
+        content: "         "
+
+      },
+      {
+        id: "",
+        url: "../../img/rmdd3.jpg",
+        url1: "../../img/jpdu1.jpg",
+        title: "",
+        content: "         "
+      }
+     ]
+     var swiper_dest=[
+       {
+         id: "",
+         url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksaf0sewpj20go0afwij.jpg',
+         title: ""
+       },
+       {
+         id: "",
+         url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanbr218j20dw099q3k.jpg',
+         title: ""
+       },
+       {
+         id: "",
+         url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fksanpwobvj20ms0ctgm9.jpg',
+         title: ""
+       },
+       {
+         id: "",
+         url: 'http://ww1.sinaimg.cn/large/eccb7e56ly1fkscjfpzd9j20xc0m53zw.jpg',
+         title: ""
+       }
+     ]
+      api.getData('/rs/article?order=asc', "GET").then((res) => {
+        wx.hideLoading()
+        that.setData({
+          articleItems: res.data.rows
+        })
+        for (var i = 0; i < 12;i++){
+          if(i<4){
+            dest[i].title = res.data.rows[i].title;
+            dest[i].id = res.data.rows[i].id;
+          }else if(i<8){
+            dest_item[i-4].title = res.data.rows[i].title
+            dest_item[i - 4].content = res.data.rows[i].content
+            dest_item[i - 4].id = res.data.rows[i].id
+            
+          }else{
+            swiper_dest[i - 8].title = res.data.rows[i].title
+            swiper_dest[i - 8].id = res.data.rows[i].id
+            
+          }
+        }
+        
+        that.setData({
+          contItems: dest,
+          listitems:dest_item,
+          imgUrls:swiper_dest
+        })
       })
-    }
+
   },
-  getUserInfo: function(e) {
-  
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  click_img:function(e){
+    console.log(e.currentTarget.dataset)
+    wx.navigateTo({
+      url: '../article/article?id=' + e.currentTarget.dataset.id + '&url=' + e.currentTarget.dataset.url
     })
   },
   //下拉刷新

@@ -38,7 +38,7 @@
   align-items: center;
   height: 80rpx;
   padding: 0 0 0 35px;
-  background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkth6w6kbzj200o00o0ft.jpg) left center no-repeat;
+  background: url(http://ww1.sinaimg.cn/mw690/eccb7e56gy1fossl45tvoj205k05kt8l.jpg) left center no-repeat;
   background-size: 18px 18px;
    /* background-position-x: 15px;  */
 }
@@ -78,4 +78,17 @@
   height:30px;
   background: url(http://ww1.sinaimg.cn/large/eccb7e56ly1fkthhu4w2mj200o00o07y.jpg) center center no-repeat;
    background-size: 18px 18px;
+}
+.contant{
+  width:100%;
+  display:block;
+  height:50px;
+  opacity:1;
+  padding:0;
+  border: 1px rgba(0, 0, 0, 0);
+  outline: none!important;
+  background: 0;
+}
+button::after{
+  border:0;
 }

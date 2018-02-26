@@ -16,6 +16,7 @@ page{
   display: block;
   margin-left: 30px;
   margin-right:8px;
+  margin-top: 10px;
 }
 .btn{
   display: block;
@@ -27,9 +28,6 @@ page{
 .button{
   background-color:#548CD7;
   color: #fff;
-}
-checkbox .wx-checkbox-input {
-    border-radius:50%;
 }
 .current_ques{
     margin:8px 0 28px 10px;

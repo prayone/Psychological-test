@@ -5,7 +5,7 @@
                 问题描述
             </view>
            <view class="sec">
-                <textarea placeholder-style="color:#aaa;" placeholder="您的意见就是我们前进的动力" auto-focus class='shuru' />
+                <textarea bindchange="bindChange" value='{{val}}' placeholder-style="color:#aaa;" placeholder="您的意见就是我们前进的动力" auto-focus class='shuru' />
             </view>
         </view>
     </view>

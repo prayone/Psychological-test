@@ -32,8 +32,16 @@ page{
 .lan{
   background-color: #548CD7;
   color: #fff;
-
+  height: 60px;
+  line-height: 60px;
 }
 .fenxiang{
   margin-top:40px;
+  margin-bottom: 10px;
+}
+.back_index{
+  text-align: right;
+  font-weight: bold;
+  color: red;
+  margin: 10px 0;
 }

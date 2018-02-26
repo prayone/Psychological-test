@@ -13,23 +13,27 @@
           </view>
       </view>
 
-      <view class='info-bot'>
-           <view class=' wdcs'>
-                <text class='text-icon'>我的测试</text>
-                <text class='text-all'></text>
-            </view>
-      </view>
-        <view class='info-bot info-mar' bindtap="toast2" >
+      
+      <view class='info-bot info-mar' bindtap="toast2" >
            <view class='yjfk'>
                 <text class='text-icon'>意见反馈</text>
                 <text class='text-all'></text>
             </view>
       </view>
-        <view class='info-bot' bindtap="aboutUs">
+      
+      <view class='info-bot' bindtap="aboutUs">
            <view class='gywm'>
-                <text class='text-icon'>关于我们</text>
+                <text class='text-icon'>关于我</text>
                 <text class='text-all'></text>
             </view>
+      </view>
+      <view class='info-bot info-mar' >
+        <button open-type="contact" class="contant" style=''>
+           <view class='wdcs'>
+                       <text class='text-icon'>联系我</text>
+                        <text class='text-all'></text>
+            </view>
+        </button>
       </view>
    
   

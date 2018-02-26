@@ -18,17 +18,14 @@ Page({
     },
     aa:false,
     progress:100/46
-
   },
  
-  //------------------事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+ 
   onLoad: function () {
     var that=this;
+    wx.showLoading({
+      title: '加载中',
+    });
     api.getData('/rs/question?order=asc&status=1',"GET").then((res)=>{
             wx.hideLoading()
             that.setData({
@@ -41,7 +38,8 @@ Page({
   checkboxChange: function (e) {
     var that=this;
     setTimeout(function(){
-      if (e.target.dataset.id == that.data.testitems[that.data.testitems.length-1].id){
+      // that.data.testitems.length - 1
+      if (e.target.dataset.id == that.data.testitems[that.data.testitems.length - 1].id){
         wx.redirectTo({
           url: "../testRes/testRes"
         })

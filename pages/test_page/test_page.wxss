@@ -1,0 +1,36 @@
+.title{
+  margin: 20px 0 5px 0;
+  text-align: center;
+  color: red;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.title_bottom{
+  font-size: 12px;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+.title_left{
+    font-size: 14px;
+    font-weight: bold;
+    margin:15px 0 0 10px;
+}
+.content{
+  font-size: 13px;
+  color:#333;
+  margin: 0 8px;
+}
+text{
+  padding-top: 0;
+  line-height: 20px;
+}
+.lan{
+  background-color: #548CD7;
+  color: #fff;
+
+}
+button {
+  margin: 30px 40px;
+  height:60px;
+  line-height: 60px; 
+}

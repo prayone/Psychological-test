@@ -1,0 +1,21 @@
+/* pages/article/article.wxss */
+.title{
+  font-size: 20px;
+  text-align:center;
+  font-weight:bold;
+  margin-top:30px;
+}
+.cont{
+  display: block;
+  font-size:14px;
+  padding: 5px 20px 30px 20px;
+  color: #666;
+  text-align: justify;
+  line-height: 25px;
+}
+.image{
+  display: block;
+  margin: 0 auto;
+  width:95%;
+  height:100%;
+}

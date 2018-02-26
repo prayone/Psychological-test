@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
     "pages/myInfo/myInfo",
     "pages/mainTest/mainTest",
     "pages/yjback/yjback",
     "pages/testRes/testRes",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/test_page/test_page",
+    "pages/article/article"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -26,7 +27,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/mainTest/mainTest",
+        "pagePath": "pages/test_page/test_page",
         "iconPath": "img/xlcs.png",
         "selectedIconPath": "img/xlcs1.png",
         "text": "心理测试"

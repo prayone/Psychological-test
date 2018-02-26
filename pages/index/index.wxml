@@ -1,10 +1,14 @@
 <view class="content">  
     <view class='selection1'> 
-        <swiper indicator-dots="{{indicatorDots}}"
+     <!-- indicator-dots="{{indicatorDots}}" -->
+        <swiper
           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" height="200">
-          <block wx:key wx:for="{{imgUrls}}">
-            <swiper-item class="itemaa">
-              <image src="{{item}}" class="slide-image"/>
+          <block wx:key wx:for="{{imgUrls}}" >
+            <swiper-item class="itemaa" data-id='{{item.id}}' data-url='{{item.url}}' bindtap='click_img' >
+              <image src="{{item.url}}" class="slide-image"/>
+               <view class=' swiper-text'>
+                    <text class='txt'>{{item.title}}</text>
+                </view>
             </swiper-item>
           </block>
         </swiper>
@@ -12,10 +16,10 @@
     <view class='selection2'>
         <view class='header'>
             <text>精品导读</text>
-            <text class='text-all'>全部导读</text>
+            <!-- <text class='text-all'>全部导读</text> -->
         </view>
         <view class='cont'>
-             <view class='cont-item' wx:key wx:for="{{contItems}}">
+             <view class='cont-item' wx:key wx:for="{{contItems}}" data-id='{{item.id}}' data-url='{{item.url}}' bindtap='click_img'>
                   <image src='{{item.url}}'></image>
                   <view class='cont-item-text'>
                        <text class='txt'>{{item.title}}</text>
@@ -28,21 +32,21 @@
     <view class='selection3'>
         <view class='header'>
             <text>热门导读</text>
-            <text class='text-all'>更多>></text>
+            <!-- <text class='text-all'>更多>></text> -->
         </view>
-        <view class='list-item' wx:key wx:for="{{listitems}}">
+        <view class='list-item' wx:key wx:for="{{listitems}}" data-id='{{item.id}}' data-url='{{item.url}}' bindtap='click_img'>
               <view class='list-item-images'>
                   <image class='' src="{{item.url}}"></image>
                   <image class='avatar' src="{{item.url1}}"></image>
               </view>
                <view class='list-item-text'>
                   <view class='list-item-text-title'>
-                      <text style="position:relative;top:6px;">{{item.title}}</text>
+                      <text style="position:relative;top:6px;color:#548CD7;">{{item.title}}</text>
                   </view>
                    <view class='list-item-text-content'>
-                        <text padding="0" >
-                        {{item.content}}
-                        </text>
+                        <view padding="0" class='cont_article'>
+                        　　{{item.content}}
+                        </view>
                   </view>
               </view>
         </view>

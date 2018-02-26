@@ -1,0 +1,9 @@
+<view  class='title' style=''>
+    {{article_title}}
+</view>
+<view style='height:180px;margin-top:20px;'>
+    <image src="{{imgItems}}" class="image" />
+</view> 
+<text class='cont' style=''>
+    {{articleItems}}
+</text>
