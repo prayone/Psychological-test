@@ -12,7 +12,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#548CD7",
-    "navigationBarTitleText": "心理测试服务",
+    "navigationBarTitleText": "性格测试",
     "navigationBarTextStyle":"#fff"
     
   },
@@ -30,7 +30,7 @@
         "pagePath": "pages/test_page/test_page",
         "iconPath": "img/xlcs.png",
         "selectedIconPath": "img/xlcs1.png",
-        "text": "心理测试"
+        "text": "性格测试"
       },
       {
         "pagePath": "pages/myInfo/myInfo",
