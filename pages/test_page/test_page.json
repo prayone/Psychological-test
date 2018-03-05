@@ -1,1 +1,5 @@
-{}
+{
+  "navigationBarTitleText": "专业性格测试",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#548CD7"
+}
